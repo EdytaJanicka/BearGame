@@ -10,8 +10,6 @@ public class BearMovement : MonoBehaviour
     public Animator bear;
     public Rigidbody2D rb;
     Vector2 movement;
-    public Collider2D slim;
-    public Collider2D chonky;
 
 
     void Update()
@@ -34,8 +32,6 @@ public class BearMovement : MonoBehaviour
             bear.SetBool("Left", false);
             bear.SetBool("Up", false);
             bear.SetBool("Down", false);
-            slim.enabled = false;
-            chonky.enabled = true;
         }
         else if(Input.GetAxisRaw("Horizontal") < 0)
         {
@@ -43,8 +39,6 @@ public class BearMovement : MonoBehaviour
             bear.SetBool("Left", true);
             bear.SetBool("Up", false);
             bear.SetBool("Down", false);
-            slim.enabled = false;
-            chonky.enabled = true;
         }
 
         if (Input.GetAxisRaw("Vertical") > 0)
@@ -53,8 +47,6 @@ public class BearMovement : MonoBehaviour
             bear.SetBool("Left", false);
             bear.SetBool("Up", true);
             bear.SetBool("Down", false);
-            slim.enabled = true;
-            chonky.enabled = false;
         }
         else if (Input.GetAxisRaw("Vertical") < 0)
         {
@@ -62,8 +54,6 @@ public class BearMovement : MonoBehaviour
             bear.SetBool("Left", false);
             bear.SetBool("Up", false);
             bear.SetBool("Down", true);
-            slim.enabled = true;
-            chonky.enabled = false;
         }
 
     }   

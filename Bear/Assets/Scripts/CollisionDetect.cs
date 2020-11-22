@@ -6,13 +6,13 @@ public class CollisionDetect : MonoBehaviour
 {
     public GameObject thisObject;
     
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
-         thisObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+         thisObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        thisObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        thisObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
     }
 }
