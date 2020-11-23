@@ -7,9 +7,12 @@ public class EatingBerries : MonoBehaviour
     public GameObject buttonE;
    // public int minFood = 0;
     public AllFood currentFood;
-    private bool inField = false;
+    public bool inField = false;
     public FoodBarScript foodBar;
     public GameObject thisBerryBush;
+    public Animator eating;
+    public StopWalking stopWhileEating;
+    public int amountOfBerries = 5;
 
     void Start()
     {
@@ -21,7 +24,9 @@ public class EatingBerries : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && inField == true)
         {
-            EatBerries(5);
+            stopWhileEating.StopWalkingNow();
+            eating.SetTrigger("EatRight");
+            EatBerries(amountOfBerries);
         }
     }
     private void OnTriggerEnter2D(Collider2D col)

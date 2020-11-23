@@ -8,6 +8,8 @@ public class AllFood : MonoBehaviour
     void Start()
     {
         currentFood = 0;
+       
     }
 
+    
 }

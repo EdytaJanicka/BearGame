@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunOnEnterScript : MonoBehaviour
+public class RunOnEnterHumanScript : MonoBehaviour
 {
     public Animator animator;
 
      
     public void OnTriggerEnter2D(Collider2D other)
     {
-        animator.SetTrigger("StagRun");
+        animator.SetTrigger("HumanRun");
     }
 }
